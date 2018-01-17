@@ -21,8 +21,12 @@ class CBCentralManagerMock: NSObject {
 
     var retrievePeripheralsParams: [([UUID])] = []
     var retrievePeripheralsReturns: [[CBPeripheralMock]] = []
+    var retrievePeripheralsReturn: [CBPeripheralMock]?
     func retrievePeripherals(withIdentifiers identifiers: [UUID]) -> [CBPeripheralMock] {
         retrievePeripheralsParams.append((identifiers))
+        if let retrievePeripheralsReturn = retrievePeripheralsReturn {
+            return retrievePeripheralsReturn
+        }
         if retrievePeripheralsReturns.isEmpty {
             fatalError("No return value")
         } else {
@@ -32,8 +36,12 @@ class CBCentralManagerMock: NSObject {
 
     var retrieveConnectedPeripheralsParams: [([CBUUID])] = []
     var retrieveConnectedPeripheralsReturns: [[CBPeripheralMock]] = []
+    var retrieveConnectedPeripheralsReturn: [CBPeripheralMock]?
     func retrieveConnectedPeripherals(withServices serviceUUIDs: [CBUUID]) -> [CBPeripheralMock] {
         retrieveConnectedPeripheralsParams.append((serviceUUIDs))
+        if let retrieveConnectedPeripheralsReturn = retrieveConnectedPeripheralsReturn {
+            return retrieveConnectedPeripheralsReturn
+        }
         if retrieveConnectedPeripheralsReturns.isEmpty {
             fatalError("No return value")
         } else {
@@ -103,8 +111,12 @@ class CBPeripheralMock: NSObject {
 
     var maximumWriteValueLengthParams: [(CBCharacteristicWriteType)] = []
     var maximumWriteValueLengthReturns: [Int] = []
+    var maximumWriteValueLengthReturn: Int?
     func maximumWriteValueLength(for type: CBCharacteristicWriteType) -> Int {
         maximumWriteValueLengthParams.append((type))
+        if let maximumWriteValueLengthReturn = maximumWriteValueLengthReturn {
+            return maximumWriteValueLengthReturn
+        }
         if maximumWriteValueLengthReturns.isEmpty {
             fatalError("No return value")
         } else {
@@ -205,8 +217,12 @@ class PeripheralDelegateWrapperProviderMock: NSObject {
 
     var provideParams: [(CBPeripheralMock)] = []
     var provideReturns: [CBPeripheralDelegateWrapperMock] = []
+    var provideReturn: CBPeripheralDelegateWrapperMock?
     func provide(for peripheral: CBPeripheralMock) -> CBPeripheralDelegateWrapperMock {
         provideParams.append((peripheral))
+        if let provideReturn = provideReturn {
+            return provideReturn
+        }
         if provideReturns.isEmpty {
             fatalError("No return value")
         } else {
