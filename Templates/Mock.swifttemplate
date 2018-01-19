@@ -124,11 +124,8 @@ class <%= typeToMock.name %>Mock: NSObject {
     func <%= Utils.printMethodName(method) %><%= methodReturnDeclaration %> {
         <%= methodParamsName %>.append((<%= method.parameters.reduce("", { "\($0)\($1.name), " }).dropLast(2) %>))
 <%          if isReturningType { -%>
-        if let <%= methodReturnName %> = <%= methodReturnName %> {
-            return <%= methodReturnName %>
-        }
         if <%= methodReturnsName %>.isEmpty {
-            fatalError("No return value")
+            return <%= methodReturnName %>!
         } else {
             return <%= methodReturnsName %>.removeFirst()
         }

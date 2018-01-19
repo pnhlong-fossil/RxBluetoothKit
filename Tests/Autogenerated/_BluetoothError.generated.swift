@@ -31,7 +31,7 @@ enum _BluetoothError: Error {
     /// object that created Observables that subscriptions are made to.
     case destroyed
     // Emitted when `_BluetoothManager.scanForPeripherals` called and there is already ongoing scan
-    case ongoingScan
+    case scanInProgress
     // States
     case bluetoothUnsupported
     case bluetoothUnauthorized
@@ -68,7 +68,7 @@ extension _BluetoothError: CustomStringConvertible {
             The object that is the source of this Observable was destroyed.
             It's programmer's error, please check documentation of error for more details
             """
-        case .ongoingScan:
+        case .scanInProgress:
             return """
             Tried to scan for peripheral when there is already ongoing scan.
             You can have only 1 ongoing scanning, please check documentation of _BluetoothManager for more details
@@ -142,7 +142,7 @@ extension _BluetoothError: Equatable {}
 
 func == (lhs: _BluetoothError, rhs: _BluetoothError) -> Bool {
     switch (lhs, rhs) {
-    case (.ongoingScan, .ongoingScan): return true
+    case (.scanInProgress, .scanInProgress): return true
     // States
     case (.bluetoothUnsupported, .bluetoothUnsupported): return true
     case (.bluetoothUnauthorized, .bluetoothUnauthorized): return true

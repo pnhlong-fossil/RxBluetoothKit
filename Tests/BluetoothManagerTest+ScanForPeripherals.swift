@@ -47,7 +47,7 @@ class BluetoothManagerTest_ScanForPeripherals: BaseBluetoothManagerTest {
         }
     }
     
-    func testErrorPropagationAtOngoingScan() {
+    func testErrorPropagationAtScanInProgress() {
         let observer = setUpScanForPeripherals(withServices: nil, options: nil)
         centralManagerMock.state = .poweredOn
         self.manager.scanForPeripherals(withServices: nil, options: nil).subscribe().disposed(by: disposeBag)
@@ -55,7 +55,7 @@ class BluetoothManagerTest_ScanForPeripherals: BaseBluetoothManagerTest {
         testScheduler.advanceTo(subscribeTime)
         
         XCTAssertEqual(observer.events.count, 1, "should get ongoing error event")
-        XCTAssertError(observer.events[0].value, _BluetoothError.ongoingScan, "should get proper ongoing error event")
+        XCTAssertError(observer.events[0].value, _BluetoothError.scanInProgress, "should get proper ongoing error event")
     }
     
     func testProperScanMethodCall() {

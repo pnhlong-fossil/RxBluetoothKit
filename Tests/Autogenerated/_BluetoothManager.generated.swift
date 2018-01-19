@@ -110,7 +110,7 @@ class _BluetoothManager {
     ///     .take(2)
     /// ```
     ///
-    /// There can be only one ongoing scanning. It will return `_BluetoothError.ongoingScan` error if
+    /// There can be only one ongoing scanning. It will return `_BluetoothError.scanInProgress` error if
     /// this method will be called when there is already ongoing scan.
     /// As a result you will receive `_ScannedPeripheral` which contains `_Peripheral` object, `AdvertisementData` and
     /// peripheral's RSSI registered during discovery. You can then `connectToPeripheral(_:options:)` and do other
@@ -131,7 +131,7 @@ class _BluetoothManager {
                 }
                 strongSelf.lock.lock(); defer { strongSelf.lock.unlock() }
                 if strongSelf.scanDisposable != nil {
-                    observer.onError(_BluetoothError.ongoingScan)
+                    observer.onError(_BluetoothError.scanInProgress)
                     return Disposables.create()
                 }
                 strongSelf.scanDisposable = strongSelf.delegateWrapper.didDiscoverPeripheral
