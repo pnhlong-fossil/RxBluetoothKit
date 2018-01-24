@@ -12,6 +12,7 @@
 		2672849F1CC6695F007C0DE2 /* NSDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2672849E1CC6695F007C0DE2 /* NSDataUtilities.swift */; };
 		26CE004D1CBE71600072B0AA /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE004C1CBE71600072B0AA /* ServiceTableViewCell.swift */; };
 		26EE726B1DA240CD00DB4F23 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE726A1DA240CD00DB4F23 /* SplitViewController.swift */; };
+		4C46005F201884A500A54D83 /* MFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C46005E201884A500A54D83 /* MFUtils.swift */; };
 		A1299C6C1CBE41C5005DEA5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1299C6B1CBE41C5005DEA5B /* Assets.xcassets */; };
 		A1299C6F1CBE41C5005DEA5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1299C6D1CBE41C5005DEA5B /* LaunchScreen.storyboard */; };
 		A1299C771CBE426A005DEA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1299C761CBE426A005DEA5B /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		2672849E1CC6695F007C0DE2 /* NSDataUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataUtilities.swift; sourceTree = "<group>"; };
 		26CE004C1CBE71600072B0AA /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		26EE726A1DA240CD00DB4F23 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		4C46005E201884A500A54D83 /* MFUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFUtils.swift; sourceTree = "<group>"; };
 		A1299C611CBE41C5005DEA5B /* RxBluetoothKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxBluetoothKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1299C6B1CBE41C5005DEA5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1299C6E1CBE41C5005DEA5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 			name = SplitViewController;
 			sourceTree = "<group>";
 		};
+		4C4600602018895600A54D83 /* Misfit */ = {
+			isa = PBXGroup;
+			children = (
+				4C46005E201884A500A54D83 /* MFUtils.swift */,
+			);
+			name = Misfit;
+			sourceTree = "<group>";
+		};
 		7FCCA76BE11D1BB271DC7518 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				A1299C6B1CBE41C5005DEA5B /* Assets.xcassets */,
 				A1299C6D1CBE41C5005DEA5B /* LaunchScreen.storyboard */,
 				A1299C701CBE41C5005DEA5B /* Info.plist */,
+				4C4600602018895600A54D83 /* Misfit */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 				26EE726B1DA240CD00DB4F23 /* SplitViewController.swift in Sources */,
 				265CD6011CBFE421007120AB /* CharacteristicsController.swift in Sources */,
 				A1299C7E1CBE4295005DEA5B /* ScannedPeripheralCell.swift in Sources */,
+				4C46005F201884A500A54D83 /* MFUtils.swift in Sources */,
 				2672849F1CC6695F007C0DE2 /* NSDataUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

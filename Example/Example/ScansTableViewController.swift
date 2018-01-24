@@ -54,6 +54,9 @@ class ScansTableViewController: UIViewController {
     }
 
     private func addNewScannedPeripheral(_ peripheral: ScannedPeripheral) {
+        if (!MFUtils.isMisfitDevice(peripheral: peripheral)){
+            return
+        }
         let mapped = peripheralsArray.map { $0.peripheral }
         if let indx = mapped.index(of: peripheral.peripheral) {
             peripheralsArray[indx] = peripheral
@@ -128,8 +131,8 @@ extension ScannedPeripheralCell {
     func configure(with peripheral: ScannedPeripheral) {
         RSSILabel.text = peripheral.rssi.stringValue
         peripheralNameLabel.text = peripheral.advertisementData.localName ?? peripheral.peripheral.identifier.uuidString
-
         // TODO: Pretty print it ;) nsattributed string maybe.
-        advertismentDataLabel.text = "\(peripheral.advertisementData.advertisementData)"
+//        advertismentDataLabel.text = "\(peripheral.advertisementData.advertisementData)"
+        peripheralNameLabel.text = MFUtils.parseDeviceSerial(peripheral: peripheral) ?? "nil"
     }
 }
