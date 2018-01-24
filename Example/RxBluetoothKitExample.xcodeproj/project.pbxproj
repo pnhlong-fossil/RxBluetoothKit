@@ -29,7 +29,7 @@
 		2672849E1CC6695F007C0DE2 /* NSDataUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataUtilities.swift; sourceTree = "<group>"; };
 		26CE004C1CBE71600072B0AA /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		26EE726A1DA240CD00DB4F23 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
-		A1299C611CBE41C5005DEA5B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1299C611CBE41C5005DEA5B /* RxBluetoothKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxBluetoothKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1299C6B1CBE41C5005DEA5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1299C6E1CBE41C5005DEA5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1299C701CBE41C5005DEA5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		A1299C621CBE41C5005DEA5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1299C611CBE41C5005DEA5B /* Example.app */,
+				A1299C611CBE41C5005DEA5B /* RxBluetoothKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1299C601CBE41C5005DEA5B /* Example */ = {
+		A1299C601CBE41C5005DEA5B /* RxBluetoothKitExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1299C731CBE41C5005DEA5B /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = A1299C731CBE41C5005DEA5B /* Build configuration list for PBXNativeTarget "RxBluetoothKitExample" */;
 			buildPhases = (
 				5BB20924261D292D6C4DE28A /* [CP] Check Pods Manifest.lock */,
 				A1299C5D1CBE41C5005DEA5B /* Sources */,
@@ -175,9 +175,9 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = RxBluetoothKitExample;
 			productName = Example;
-			productReference = A1299C611CBE41C5005DEA5B /* Example.app */;
+			productReference = A1299C611CBE41C5005DEA5B /* RxBluetoothKitExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,11 +192,11 @@
 				TargetAttributes = {
 					A1299C601CBE41C5005DEA5B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 96TQV7B5LD;
+						DevelopmentTeam = M363G4DFMS;
 					};
 				};
 			};
-			buildConfigurationList = A1299C5C1CBE41C5005DEA5B /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = A1299C5C1CBE41C5005DEA5B /* Build configuration list for PBXProject "RxBluetoothKitExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,7 +209,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1299C601CBE41C5005DEA5B /* Example */,
+				A1299C601CBE41C5005DEA5B /* RxBluetoothKitExample */,
 			);
 		};
 /* End PBXProject section */
@@ -409,10 +409,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 96TQV7B5LD;
+				DEVELOPMENT_TEAM = M363G4DFMS;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.polidea.rxbluetoothkit.example;
+				PRODUCT_BUNDLE_IDENTIFIER = pnhlong.rxbluetoothkit.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -426,10 +427,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 96TQV7B5LD;
+				DEVELOPMENT_TEAM = M363G4DFMS;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.polidea.rxbluetoothkit.example;
+				PRODUCT_BUNDLE_IDENTIFIER = pnhlong.rxbluetoothkit.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -438,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1299C5C1CBE41C5005DEA5B /* Build configuration list for PBXProject "Example" */ = {
+		A1299C5C1CBE41C5005DEA5B /* Build configuration list for PBXProject "RxBluetoothKitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1299C711CBE41C5005DEA5B /* Debug */,
@@ -447,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1299C731CBE41C5005DEA5B /* Build configuration list for PBXNativeTarget "Example" */ = {
+		A1299C731CBE41C5005DEA5B /* Build configuration list for PBXNativeTarget "RxBluetoothKitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1299C741CBE41C5005DEA5B /* Debug */,
